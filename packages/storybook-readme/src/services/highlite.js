@@ -6,7 +6,7 @@ export default (dom, { withJSX = false } = {}) => {
   const nodes = dom.querySelectorAll('pre code');
 
   if (nodes.length > 0) {
-    for (var i = 0; i < nodes.length; i = i + 1) {
+    for (let i = 0; i < nodes.length; i = i + 1) {
       if (withJSX) {
         if (nodes[i].classList.contains('language-js')) {
           nodes[i].classList.remove('language-js');

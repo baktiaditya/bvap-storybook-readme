@@ -36,7 +36,7 @@ class Story extends React.Component {
     const FooterComponent = config.FooterComponent || FooterDocs;
 
     return (
-      <div style={{ padding: '10px' }}>
+      <div style={{ padding: '20px' }}>
         {docsBeforePreview &&
           docsBeforePreview.map((doc, index) => (
             <div

@@ -11,8 +11,9 @@ const styles = stringRaw`
     -webkit-text-size-adjust: 100%;
     line-height: 1.5;
     color: #333;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-    font-size: 16px;
+    font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    /* font-size: 16px; */
+    font-size: 15px;
     line-height: 1.5;
     word-wrap: break-word;
   }
@@ -552,7 +553,8 @@ const styles = stringRaw`
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     margin: 0;
-    font-size: 85%;
+    /* font-size: 85%; */
+    font-size: 14px;
     background-color: rgba(0,0,0,0.04);
     border-radius: 3px;
   }
@@ -570,7 +572,8 @@ const styles = stringRaw`
   .markdown-body pre>code {
     padding: 0;
     margin: 0;
-    font-size: 100%;
+    /* font-size: 100%; */
+    font-size: 13px;
     word-break: normal;
     white-space: pre;
     background: transparent;

@@ -1,7 +1,6 @@
-import React from 'react';
-import rockey from 'rockey-react';
+import styled from 'react-emotion';
 
-export default rockey.div('FooterDocs')`
+export default styled('div')`
   border-top: 1px dashed #e5e5e5;
   padding-top: 16px;
 `;
