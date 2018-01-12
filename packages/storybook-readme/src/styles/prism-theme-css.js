@@ -1,17 +1,14 @@
-import stringRaw from 'string-raw';
+import { injectGlobal } from 'react-emotion';
 
-// Took from prismjs/themes/prism.css and updated a bit
-const styles = stringRaw`
-  /**
-  * prism.js default theme for JavaScript, CSS and HTML
-  * Based on dabblet (http://dabblet.com)
-  * @author Lea Verou
-  */
-
+// eslint-disable-next-line no-unused-expressions
+injectGlobal`
+.markdown-body {
   code[class*="language-"],
   pre[class*="language-"] {
     color: black;
-    background: none;
+    /*background: none;*/
+    /*background-color: #f6f8fa;*/
+    background-color: #f7f7f7;
     text-shadow: 0 1px white;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     text-align: left;
@@ -44,8 +41,8 @@ const styles = stringRaw`
   }
 
   @media print {
-  code[class*="language-"],
-  pre[class*="language-"] {
+    code[class*="language-"],
+    pre[class*="language-"] {
     	text-shadow: none;
     }
   }
@@ -57,10 +54,10 @@ const styles = stringRaw`
     overflow: auto;
   }
 
-  :not(pre) > code[class*="language-"],
+  /*:not(pre) > code[class*="language-"],
   pre[class*="language-"] {
-  backgr  ound: #f5f2f0;
-  }
+    background: #f5f2f0;
+  }*/
 
   /* Inline code */
   :not(pre) > code[class*="language-"] {
@@ -148,10 +145,5 @@ const styles = stringRaw`
   .token.entity {
     cursor: help;
   }
+}
 `;
-
-const styleNode = document.createElement('style');
-styleNode.id = 'prism-theme-css';
-styleNode.innerHTML = styles;
-
-document.head.appendChild(styleNode);
