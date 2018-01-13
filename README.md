@@ -23,11 +23,11 @@ Stories will be added with *.addWithInfo* method if [Storybook Info Addon](https
 
 ### Install
 
-`npm install --save-dev storybook-readme`
+`npm install --save-dev bvap-storybook-readme`
 
 or
 
-`yarn add --dev storybook-readme`
+`yarn add --dev bvap-storybook-readme`
 
 ### Webpack Configuration
 
@@ -49,7 +49,7 @@ module.exports = {
 Register addon at *.storybook/addons.js*
 
 ```js
-import 'storybook-readme/register';
+import 'bvap-storybook-readme/register';
 ```
 
 Then create your stories with the *withReadme* or *withDocs* API (use as story HOC or as Storybook Decorator).
@@ -61,10 +61,10 @@ It is possible to combine *withDocs* and *withReadme* - [Example combined APIs](
 
 ```js
 import ButtonReadme from '../components/button/README.md';
-import { withReadme, withDocs }  from 'storybook-readme';
+import { withReadme, withDocs }  from 'bvap-storybook-readme';
 // or import separetaly
-// import withReadme from 'storybook-readme/with-readme';
-// import withDocs from 'storybook-readme/with-docs';
+// import withReadme from 'bvap-storybook-readme/with-readme';
+// import withDocs from 'bvap-storybook-readme/with-docs';
 
 storiesOf('Button', module)
   .add('Default', withReadme(ButtonReadme, () => <Button onClick={action('clicked')} label="Hello Button"/>))
@@ -100,7 +100,7 @@ storiesOf('Content', module)
 
 **withReadme** example:
 ```js
-import { withReadme } from 'storybook-readme';
+import { withReadme } from 'bvap-storybook-readme';
 import OriginalButtonREADME from 'node_modules/components/button/README.md';
 import ButtonREADME from '../components/components/button/README.md';
 
@@ -113,7 +113,7 @@ storiesOf('Button', module)
 
 **withDocs** example:
 ```js
-import { withDocs } from 'storybook-readme';
+import { withDocs } from 'bvap-storybook-readme';
 import ButtonREADME from '../components/components/button/README.md';
 
 storiesOf('Button', module)
@@ -134,7 +134,7 @@ In this way code of stories is more clean.
 
 **withReadme** example:
 ```js
-import { withReadme } from 'storybook-readme';
+import { withReadme } from 'bvap-storybook-readme';
 import OriginalButtonREADME from 'node_modules/components/button/README.md';
 import ButtonREADME from '../components/components/button/README.md';
 
@@ -148,7 +148,7 @@ storiesOf('Button', module)
 
 **withDocs** example:
 ```js
-import { withDocs } from 'storybook-readme';
+import { withDocs } from 'bvap-storybook-readme';
 import ButtonREADME from 'node_modules/component/README.md';
 
 storiesOf('Button', module)
@@ -168,7 +168,7 @@ Will appear at all stories that uses `withDocs` api.
 > Note: Should be added before all stories initialization.
 
 ```js
-import { withDocs } from 'storybook-readme';
+import { withDocs } from 'bvap-storybook-readme';
 import DocsFooterReadme from 'components/DOCS_FOOTER.md';
 
 withDocs.addFooter(DocsFooterReadme);

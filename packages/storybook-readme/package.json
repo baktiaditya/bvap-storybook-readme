@@ -1,13 +1,13 @@
 {
   "name": "bvap-storybook-readme",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "React storybook addon to show components README",
   "main": "index.js",
-  "homepage": "https://github.com/baktiaditya/storybook-readme",
-  "bugs": "https://github.com/baktiaditya/storybook-readme/issues",
+  "homepage": "https://github.com/baktiaditya/bvap-storybook-readme",
+  "bugs": "https://github.com/baktiaditya/bvap-storybook-readme/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baktiaditya/storybook-readme"
+    "url": "git+https://github.com/baktiaditya/bvap-storybook-readme"
   },
   "dependencies": {
     "emotion": "^8.0.11",

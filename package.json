@@ -1,12 +1,12 @@
 {
-  "name": "storybook-readme",
+  "name": "bvap-storybook-readme",
   "private": true,
   "description": "React storybook addon to show components README",
-  "homepage": "https://github.com/baktiaditya/storybook-readme",
-  "bugs": "https://github.com/baktiaditya/storybook-readme/issues",
+  "homepage": "https://github.com/baktiaditya/bvap-storybook-readme",
+  "bugs": "https://github.com/baktiaditya/bvap-storybook-readme/issues",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/baktiaditya/storybook-readme"
+    "url": "git+https://github.com/baktiaditya/bvap-storybook-readme"
   },
   "devDependencies": {
     "@storybook/storybook-deployer": "^2.0.0",
