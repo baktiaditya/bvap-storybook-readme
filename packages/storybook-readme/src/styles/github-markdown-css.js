@@ -12,9 +12,8 @@ injectGlobal`
   -webkit-text-size-adjust: 100%;
   line-height: 1.5;
   color: #333;
-  font-family: Roboto, -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-  /* font-size: 16px; */
-  font-size: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  font-size: 16px; 
   word-wrap: break-word;
 }
 
@@ -338,11 +337,11 @@ color: #4078c0;
   content: "";
 }
 
-.markdown-body>*:first-child {
+.markdown-body > *:first-child {
   margin-top: 0 !important;
 }
 
-.markdown-body>*:last-child {
+.markdown-body > *:last-child {
   margin-bottom: 0 !important;
 }
 
@@ -387,11 +386,11 @@ color: #4078c0;
   border-left: 0.25em solid #ddd;
 }
 
-.markdown-body blockquote>:first-child {
+.markdown-body blockquote > :first-child {
   margin-top: 0;
 }
 
-.markdown-body blockquote>:last-child {
+.markdown-body blockquote > :last-child {
   margin-bottom: 0;
 }
 
@@ -492,11 +491,11 @@ color: #4078c0;
   margin-bottom: 0;
 }
 
-.markdown-body li>p {
+.markdown-body li > p {
   margin-top: 16px;
 }
 
-.markdown-body li+li {
+.markdown-body li + li {
   margin-top: 0.25em;
 }
 
@@ -551,8 +550,7 @@ color: #4078c0;
 .markdown-body code {
   padding: 0.2em 0;
   margin: 0;
-  /* font-size: 85%; */
-  font-size: 14px;
+  font-size: 85%; 
   background-color: rgba(0,0,0,0.04);
   border-radius: 3px;
 }
@@ -570,8 +568,7 @@ color: #4078c0;
 .markdown-body pre > code {
   padding: 0;
   margin: 0;
-  /* font-size: 100%; */
-  font-size: 13px;
+  font-size: 100%; 
   word-break: normal;
   white-space: pre;
   background: transparent;
@@ -599,7 +596,6 @@ color: #4078c0;
 
 .markdown-body pre code {
   display: inline;
-  /*max-width: auto;*/
   max-width: inherit;
   padding: 0;
   margin: 0;
@@ -662,7 +658,7 @@ color: #4078c0;
   box-shadow: inset 0 -1px 0 #bbb;
 }
 
-.markdown-body :checked+.radio-label {
+.markdown-body :checked + .radio-label {
   position: relative;
   z-index: 1;
   border-color: #4078c0;
@@ -672,7 +668,7 @@ color: #4078c0;
   list-style-type: none;
 }
 
-.markdown-body .task-list-item+.task-list-item {
+.markdown-body .task-list-item + .task-list-item {
   margin-top: 3px;
 }
 

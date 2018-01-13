@@ -1,5 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+
+import ContainerDocs from './components/ContainerDocs';
 import StoryPreview from './components/StoryPreview';
 import FooterDocs from './components/FooterDocs';
 
@@ -32,16 +34,17 @@ class Story extends React.Component {
       docs: { docsAfterPreview, docsBeforePreview },
     } = this.props;
 
+    const ContainerComponent = config.ContainerComponent || ContainerDocs;
     const PreviewComponent = config.PreviewComponent || StoryPreview;
     const FooterComponent = config.FooterComponent || FooterDocs;
 
     return (
-      <div style={{ padding: '20px' }}>
+      <ContainerComponent>
         {docsBeforePreview &&
           docsBeforePreview.map((doc, index) => (
             <div
               key={index}
-              className={'markdown-body'}
+              className="markdown-body"
               dangerouslySetInnerHTML={{ __html: doc }}
             />
           ))}
@@ -52,7 +55,7 @@ class Story extends React.Component {
           docsAfterPreview.map((doc, index) => (
             <div
               key={index}
-              className={'markdown-body'}
+              className="markdown-body"
               dangerouslySetInnerHTML={{ __html: doc }}
             />
           ))}
@@ -60,12 +63,12 @@ class Story extends React.Component {
         {config.docsAtFooter && (
           <FooterComponent>
             <div
-              className={'markdown-body'}
+              className="markdown-body"
               dangerouslySetInnerHTML={{ __html: config.docsAtFooter }}
             />
           </FooterComponent>
         )}
-      </div>
+      </ContainerComponent>
     );
   }
 }

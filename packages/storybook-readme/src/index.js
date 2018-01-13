@@ -24,8 +24,9 @@ const WITH_README = 'WITH_README';
 const WITH_DOCS = 'WITH_DOCS';
 
 const DEFAULT_CONFIG = {
-  FooterComponent: null,
+  ContainerComponent: null,
   PreviewComponent: null,
+  FooterComponent: null,
   docsAtFooter: null,
 };
 

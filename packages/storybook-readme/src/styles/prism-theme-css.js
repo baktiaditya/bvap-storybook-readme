@@ -6,9 +6,6 @@ injectGlobal`
   code[class*="language-"],
   pre[class*="language-"] {
     color: black;
-    /*background: none;*/
-    /*background-color: #f6f8fa;*/
-    background-color: #f7f7f7;
     text-shadow: 0 1px white;
     font-family: Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;
     text-align: left;
@@ -53,11 +50,6 @@ injectGlobal`
     margin: .5em 0;
     overflow: auto;
   }
-
-  /*:not(pre) > code[class*="language-"],
-  pre[class*="language-"] {
-    background: #f5f2f0;
-  }*/
 
   /* Inline code */
   :not(pre) > code[class*="language-"] {

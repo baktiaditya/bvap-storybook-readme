@@ -14,6 +14,13 @@ import ButtonDocs from './components/Button/DOCS.md';
 withDocs.addFooterDocs(CommonFooterDocs);
 
 const styles = {
+  containerComponent: css`
+    padding: 5px;
+
+    .markdown-body {
+      font-size: 15px;
+    }
+  `,
   previewComponent: css`
     text-align: center;
     padding: 25px;
@@ -28,15 +35,18 @@ const styles = {
 };
 
 const withDocsCustom = withDocs({
-  PreviewComponent: (props) => (
+  ContainerComponent: props => (
+    <div {...props} className={styles.containerComponent} />
+  ),
+  PreviewComponent: props => (
     <div {...props} className={styles.previewComponent} />
   ),
-  FooterComponent: (props) => (
+  FooterComponent: props => (
     <div {...props} className={styles.footerComponent} />
   ),
 });
 
-storiesOf('Custom Preview and Footer', module)
+storiesOf('Custom Container, Preview, and Footer', module)
   .addDecorator(withKnobs)
   .addDecorator(withDocsCustom(ButtonDocs))
   .add('Button', () => (
@@ -104,7 +114,7 @@ storiesOf('withReadme/As HOC', module)
       >
         {text('text', 'Hello Im Button')}
       </Button>
-    )),
+    ))
   );
 
 // with docs
@@ -133,5 +143,5 @@ storiesOf('withDocs/As HOC', module)
       >
         {text('text', 'Hello Im Button')}
       </Button>
-    )),
+    ))
   );

@@ -5,10 +5,10 @@ setOptions({
   name: 'README addon',
   url: 'https://github.com/baktiaditya/bvap-storybook-readme',
   goFullScreen: false,
-  showLeftPanel: true,
-  showDownPanel: true,
+  showStoriesPanel: true,
+  showAddonPanel: true,
   showSearchBox: false,
-  downPanelInRight: true,
+  addonPanelInRight: true,
 });
 
 function loadStories() {

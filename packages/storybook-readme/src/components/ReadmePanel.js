@@ -1,14 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { css } from 'react-emotion';
 
 import { ADD_DOC_EVENT } from '../constants';
 import { setDocs, getDocs } from '../services/docsManager';
 import highlight from '../services/highlite';
 import '../styles/github-markdown-css';
 
-const markdownContainerStyle = {
-  margin: '16px',
-};
+const markdownContainerStyle = css`
+  padding: 10px;
+`;
 
 export default class ReadmePanel extends React.Component {
   state = {
@@ -25,8 +26,8 @@ export default class ReadmePanel extends React.Component {
 
       if (
         this.waitForDocs &&
-        this.waitForDocs[0] == kind &&
-        this.waitForDocs[1] == storyName
+        this.waitForDocs[0] === kind &&
+        this.waitForDocs[1] === storyName
       ) {
         this.showDocs(kind, storyName);
         this.waitForDocs = null;
@@ -78,8 +79,8 @@ export default class ReadmePanel extends React.Component {
 
     if (!docsAfterPreview && !docsBeforePreview) {
       return (
-        <div style={{ padding: '10px' }}>
-          <div className={'markdown-body'}>
+        <div className={markdownContainerStyle}>
+          <div className="markdown-body">
             <p>README.md was not added</p>
           </div>
         </div>
@@ -87,12 +88,12 @@ export default class ReadmePanel extends React.Component {
     }
 
     return (
-      <div style={{ padding: '10px' }}>
+      <div className={markdownContainerStyle}>
         {docsBeforePreview &&
           docsBeforePreview.map((doc, index) => (
             <div
               key={index}
-              className={'markdown-body'}
+              className="markdown-body"
               dangerouslySetInnerHTML={{ __html: doc }}
             />
           ))}
@@ -100,7 +101,7 @@ export default class ReadmePanel extends React.Component {
           docsAfterPreview.map((doc, index) => (
             <div
               key={index}
-              className={'markdown-body'}
+              className="markdown-body"
               dangerouslySetInnerHTML={{ __html: doc }}
             />
           ))}

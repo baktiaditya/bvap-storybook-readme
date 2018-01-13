@@ -1,8 +1,10 @@
 export const SPLITTER = '<!-- STORY -->';
 
+/*
 export function clearSplitter(docs) {
   return docs.map(doc => doc.replace(SPLITTER, ''));
 }
+*/
 
 export default function(docs) {
   const normalized = Array.isArray(docs) ? [...docs] : [docs];
