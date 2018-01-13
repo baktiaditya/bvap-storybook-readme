@@ -2,7 +2,7 @@
 
 ![Storybook README addon](https://tuchk4.tinytake.com/media/6074cc?filename=1507031891423_03-10-2017-14-58-09.png&sub_type=thumbnail_preview&type=attachment&width=700&height=542&_felix_session_id=53f589ad3ebd6ae15ad9850b6bb20044&salt=MjAwMDAyNF82MzIxMzU2)
 
-[Example Storybook with README addon](https://tuchk4.github.io/storybook-readme/?knob-alert=false&knob-success=false&knob-label=Hello%20Im%20Button&selectedKind=Button&selectedStory=Default&full=0&down=1&left=1&panelRight=1&downPanel=storybooks%2Fstorybook-addon-knobs)
+[Example Storybook with README addon](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=Custom%20Preview%20and%20Footer&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel)
 
 It is very similar with [Storybook Notes](https://github.com/storybooks/storybook/tree/master/addons/notes) addon but using Storybook Notes there is `<WithNotes notes={...}>` wrapper at each story function and thats why [Storybook Info](https://github.com/storybooks/storybook/tree/master/addons/info) always shows that [wrapper at info screen](http://take.ms/95YnX).
 
@@ -36,13 +36,16 @@ module.exports = {
   module: {
     rules: [{
       test: /\.md$/,
-      use: "raw-loader"
+      use: [
+        { loader: 'html-loader' },
+        { loader: 'markdown-loader' },
+      ],
     }]
   }
 };
 ```
 
-`npm install --save-dev raw-loader`
+`npm install --save-dev html-loader markdown-loader`
 
 ## Usage
 
@@ -54,10 +57,10 @@ import 'bvap-storybook-readme/register';
 
 Then create your stories with the *withReadme* or *withDocs* API (use as story HOC or as Storybook Decorator).
 
-- *withDocs* - Add README around the story component at the main panel. [Example withDocs](https://tuchk4.github.io/storybook-readme/?knob-alert=false&knob-success=false&knob-label=Hello%20Im%20Button&selectedKind=withDocs%2FAs%20Decorator&selectedStory=Button&full=0&down=1&left=1&panelRight=1&downPanel=storybooks%2Fstorybook-addon-knobs)
-- *withReadme* - Add README to the storybook panels. [Example withReadme](https://tuchk4.github.io/storybook-readme/?knob-alert=false&knob-success=false&knob-label=Hello%20Im%20Button&selectedKind=withReadme%2F%20As%20Decorator&selectedStory=Button&full=0&down=1&left=1&panelRight=1&downPanel=REACT_STORYBOOK%2Freadme%2Fpanel)
+- *withDocs* - Add README around the story component at the main panel. [Example withDocs](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=withDocs%2FAs%20Decorator&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel)
+- *withReadme* - Add README to the storybook panels. [Example withReadme](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=withReadme%2F%20As%20Decorator&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel)
 
-It is possible to combine *withDocs* and *withReadme* - [Example combined APIs](https://tuchk4.github.io/storybook-readme/?knob-alert=false&knob-success=false&knob-label=Hello%20Im%20Button&selectedKind=withDocs%20and%20withReadme&selectedStory=Button&full=0&down=1&left=1&panelRight=1&downPanel=REACT_STORYBOOK%2Freadme%2Fpanel)
+It is possible to combine *withDocs* and *withReadme* - [Example combined APIs](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=withDocs%20and%20withReadme&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel)
 
 ```js
 import ButtonReadme from '../components/button/README.md';
@@ -187,6 +190,6 @@ Docs before story
 Docs after story
 ```
 
-Have a look on this [README](example-react/components/Button/DOCS.md) and [live story exmaple](https://tuchk4.github.io/storybook-readme/?knob-alert=false&knob-success=false&knob-label=Hello%20Im%20Button&selectedKind=Custom%20Preview%20and%20Footer&selectedStory=Button&full=0&down=1&left=1&panelRight=1&downPanel=REACT_STORYBOOK%2Freadme%2Fpanel).
+Have a look on this [README](packages/example-react/components/Button/DOCS.md) and [live story example](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=Custom%20Preview%20and%20Footer&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel).
 
-Take a look at more examples at [example-react/stories/index.js](example-react/stories/index.js) to learn more about the `withReadme` and `withDocs` API.
+Take a look at more examples at [example-react/story.js](packages/example-react/story.js) to learn more about the `withReadme` and `withDocs` API.

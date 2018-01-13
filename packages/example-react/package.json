@@ -4,7 +4,8 @@
   "scripts": {
     "prepublishOnly": "echo \"Error: not allowed to publish\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "storybook": "cross-env NODE_ENV=development start-storybook -p 6005"
+    "storybook": "cross-env NODE_ENV=development start-storybook -p 6005",
+    "deploy-storybook": "storybook-to-ghpages"
   },
   "dependencies": {
     "emotion": "^8.0.12",
@@ -19,6 +20,7 @@
     "@storybook/addon-options": "^3.3.9",
     "@storybook/addons": "^3.3.9",
     "@storybook/react": "^3.3.9",
+    "@storybook/storybook-deployer": "^2.2.0",
     "babel-core": "^6.26.0",
     "babel-runtime": "^6.26.0",
     "bvap-storybook-readme": "^1.0.8",

@@ -9,7 +9,6 @@
     "url": "git+https://github.com/baktiaditya/bvap-storybook-readme"
   },
   "devDependencies": {
-    "@storybook/storybook-deployer": "^2.0.0",
     "husky": "^0.14.3",
     "lerna": "^2.5.1",
     "lint-staged": "^5.0.0",
@@ -20,7 +19,6 @@
     "storybook-vue": "npm run storybook ---prefix ./packages/example-vue",
     "dev": "lerna run dev --stream --parallel",
     "clear": "lerna run clear",
-    "deploy-storybook": "storybook-to-ghpages",
     "precommit": "lint-staged",
     "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/*.js' 'src/**/*.json'"
   },
