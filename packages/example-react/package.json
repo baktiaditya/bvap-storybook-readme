@@ -1,22 +1,28 @@
 {
   "name": "example-react",
   "private": true,
-  "version": "1.0.0",
   "scripts": {
     "prepublishOnly": "echo \"Error: not allowed to publish\" && exit 1",
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "cross-env NODE_ENV=development start-storybook -p 6005"
   },
   "dependencies": {
-    "@storybook/react": "^3.2.15",
-    "cross-env": "^5.1.1",
-    "html-loader": "^0.5.1",
-    "markdown-loader": "^2.0.1",
-    "react": "^16.1.1",
-    "react-dom": "^16.1.1",
-    "storybook-readme": "=3.1.1",
-    "rockey-react": "=0.0.16-alpha.256b890c"
+    "emotion": "^8.0.12",
+    "prop-types": "^15.6.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-emotion": "^8.0.12"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@storybook/addon-actions": "^3.3.9",
+    "@storybook/addon-knobs": "^3.3.9",
+    "@storybook/addon-options": "^3.3.9",
+    "@storybook/addons": "^3.3.9",
+    "@storybook/react": "^3.3.9",
+    "babel-core": "^6.26.0",
+    "babel-runtime": "^6.26.0",
+    "bvap-storybook-readme": "^1.0.8",
+    "cross-env": "^5.1.1"
+  },
   "license": "ISC"
 }

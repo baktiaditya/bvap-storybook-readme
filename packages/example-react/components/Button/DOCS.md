@@ -3,7 +3,7 @@
 Normal application button. 
 
 ```js
-import Button from 'components/Button';
+import Button from 'components/Button/Button';
 ```
 
 <!-- STORY -->
@@ -15,11 +15,11 @@ Use **alert** and **success** flags only in these cases:
 **alert** - when `onClick` action removes something
 
 ```js
-<Button alert={true} label="Remove user"/>
+<Button alert={true}>Remove user</Button>
 ```
 
 **success** - when `onClick` action adds something
 
 ```js
-<Button success={true} label="Add user"/>
+<Button success={true}>Add user</Button>
 ```

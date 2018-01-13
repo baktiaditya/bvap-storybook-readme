@@ -1,11 +1,9 @@
-import { configure, setAddon } from '@storybook/react';
+import { configure } from '@storybook/react';
 import { setOptions } from '@storybook/addon-options';
-import infoAddon from '@storybook/addon-info';
 
-setAddon(infoAddon);
 setOptions({
   name: 'README addon',
-  url: 'https://github.com/tuchk4/storybook-readme',
+  url: 'https://github.com/baktiaditya/bvap-storybook-readme',
   goFullScreen: false,
   showLeftPanel: true,
   showDownPanel: true,
@@ -14,7 +12,7 @@ setOptions({
 });
 
 function loadStories() {
-  require('../stories');
+  require('../story');
 }
 
 configure(loadStories, module);

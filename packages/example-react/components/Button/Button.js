@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import rockey from 'rockey-react';
+import styled from 'react-emotion';
 
-const StyledButton = rockey.button`
+const Button = styled('button')`
   padding: 5px;
   font-size: 15px;
   margin: 1px;
@@ -11,7 +11,6 @@ const StyledButton = rockey.button`
 
   color: ${props => {
     if (props.alert || props.success) return 'white';
-
     return 'black';
   }};
 
@@ -23,14 +22,10 @@ const StyledButton = rockey.button`
   }};
 `;
 
-const Button = ({ label, ...props }) => {
-  return <StyledButton {...props}>{label}</StyledButton>;
-};
-
 Button.propTypes = {
-  label: PropTypes.string.isRequired,
-  onClick: PropTypes.func,
   alert: PropTypes.bool,
+  children: PropTypes.node,
+  onClick: PropTypes.func,
   success: PropTypes.bool,
 };
 
