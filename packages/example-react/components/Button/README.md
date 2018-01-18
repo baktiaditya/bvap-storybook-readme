@@ -2,8 +2,8 @@
 
 ### Usage
 
-```js
-import Button from 'components/button';
+```jsx
+import Button from 'components/Button/Button';
 ```
 
 <!-- STORY -->
@@ -25,8 +25,8 @@ import Button from 'components/button';
 
 #### Icons
 
-```js
-import Button from 'components/button';
+```jsx
+import Button from 'components/Button/Button';
 
 render() {
   return (
@@ -42,14 +42,14 @@ Add `value` property that will be available at all event callback. Helps to prev
 
 For example:
 
-```js
+```jsx
 <ListItem key={item.id}>
   <Button onClick={this.remove} value={item.id}>Remove</Button>
 </ListItem>
 ```
 Instead of
 
-```js
+```jsx
 <ListItem key={item.id}>
   <Button onClick={this.remove.bind(this, item.id)}>Remove</Button>
 </ListItem>

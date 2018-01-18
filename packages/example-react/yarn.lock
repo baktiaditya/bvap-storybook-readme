@@ -1593,14 +1593,15 @@ builtin-status-codes@^3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/builtin-status-codes/-/builtin-status-codes-3.0.0.tgz#85982878e21b98e1c66425e03d0174788f569ee8"
 
-bvap-storybook-readme@^1.0.8:
-  version "1.0.8"
-  resolved "https://registry.yarnpkg.com/bvap-storybook-readme/-/bvap-storybook-readme-1.0.8.tgz#4c8a77e0ba607977c40aef4e8ac9a95b5e587940"
+bvap-storybook-readme@^1.0.10:
+  version "1.0.10"
+  resolved "https://registry.yarnpkg.com/bvap-storybook-readme/-/bvap-storybook-readme-1.0.10.tgz#0d968b29072a48f065e8b7ad8d89f5a537e70f77"
   dependencies:
     emotion "^8.0.11"
     lodash "^4.17.4"
     prismjs "^1.8.4"
     react-emotion "^8.0.11"
+    string-raw "^1.0.1"
 
 bytes@3.0.0:
   version "3.0.0"
@@ -5346,6 +5347,10 @@ stream-shift@^1.0.0:
 strict-uri-encode@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/strict-uri-encode/-/strict-uri-encode-1.1.0.tgz#279b225df1d582b1f54e65addd4352e18faa0713"
+
+string-raw@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/string-raw/-/string-raw-1.0.1.tgz#01be2665a1cfa2c57520c910698f6ca276a4c726"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"

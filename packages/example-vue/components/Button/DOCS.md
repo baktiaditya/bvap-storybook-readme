@@ -2,8 +2,8 @@
 
 Normal application button. 
 
-```js
-import MyButton from 'components/MyButton';
+```jsx
+import Button from 'components/Button/Button';
 ```
 
 <!-- STORY -->
@@ -14,18 +14,18 @@ Use **alert** and **success** flags only in these cases:
 
 **alert** - when `onClick` action removes something
 
-```js
+```jsx
 {
-  components: { MyButton },
-  template: `<my-buton alert="true">Remove User</my-button>`
+  components: { Button },
+  template: `<button alert="true">Remove User</button>`
 }
 ```
 
 **success** - when `onClick` action adds something
 
-```js
+```jsx
 {
-  components: { MyButton },
-  template: `<my-buton success="true">Add User</my-button>`
+  components: { Button },
+  template: `<button success="true">Add User</button>`
 }
 ```

@@ -101,4 +101,7 @@ export default {
     callAsDecorator: withDocsCallAsDecorator,
     callAsHoc: withDocsCallAsHoc,
   },
+  ContainerDocs,
+  StoryPreview,
+  FooterDocs,
 };

@@ -1,12 +1,12 @@
 <docs>
 # Button
 
-> NOTE: this docs defined at **docs** section inside MyButton.vue module
+> NOTE: this docs defined at **docs** section inside Button.vue module
 
 Normal application button. 
 
 ```js
-import MyButton from 'components/MyButton';
+import Button from 'components/Button/Button';
 ```
 
 <!-- STORY -->
@@ -19,8 +19,8 @@ Use **alert** and **success** flags only in these cases:
 
 ```js
 {
-  components: { MyButton },
-  template: `<my-buton alert="true">Remove User</my-button>`
+  components: { Button },
+  template: `<button alert="true">Remove User</button>`
 }
 ```
 
@@ -28,8 +28,8 @@ Use **alert** and **success** flags only in these cases:
 
 ```js
 {
-  components: { MyButton },
-  template: `<my-buton success="true">Add User</my-button>`
+  components: { Button },
+  template: `<button success="true">Add User</button>`
 }
 ```
 </docs>

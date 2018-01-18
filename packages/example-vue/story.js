@@ -1,28 +1,37 @@
 import Vue from 'vue';
 import { storiesOf } from '@storybook/vue';
 import { withKnobs, text, boolean } from '@storybook/addon-knobs';
-import { withReadme, withDocs } from 'storybook-readme';
+import { withReadme, withDocs } from 'bvap-storybook-readme';
+import MarkdownContainer from 'bvap-storybook-readme/env/vue/components/MarkdownContainer';
 
-import MyButton from '../components/MyButton/MyButton.vue';
+import MyButton from './components/Button/Button.vue';
 
-import CommonFooterDocs from '../components/COMMON_FOOTER.md';
-import ButtonReadme from '../components/MyButton/README.md';
-import ButtonDocs from '../components/MyButton/DOCS.md';
+import CommonFooterDocs from './components/COMMON_FOOTER.md';
+import ButtonReadme from './components/Button/README.md';
+import ButtonDocs from './components/Button/DOCS.md';
 
 withDocs.addFooterDocs(CommonFooterDocs);
 
 const withDocsCustom = withDocs({
-  FooterComponent: {
+  ContainerComponent: {
     data() {
       return {
         styles: {
-          padding: '25px',
-          background: 'rgba(246, 255, 0, 0.23)',
-          borderTop: '2px solid rgba(0, 0, 0, 0.1)',
+          padding: '5px',
         },
+        docsBeforePreview: this.$props.docs.docsBeforePreview,
+        docsAfterPreview: this.$props.docs.docsAfterPreview,
       };
     },
-    template: `<div v-bind:style="styles"><slot></slot></div>`,
+    components: { MarkdownContainer },
+    props: ['docs'],
+    template: `
+      <div v-bind:style="styles">
+        <markdown-container :docs="docsBeforePreview" />
+        <slot></slot>
+        <markdown-container :docs="docsAfterPreview" />
+        <slot name="footer"></slot>
+      </div>`,
   },
   PreviewComponent: {
     data() {
@@ -37,7 +46,36 @@ const withDocsCustom = withDocs({
     },
     template: `<div v-bind:style="styles"><slot></slot></div>`,
   },
+  FooterComponent: {
+    data() {
+      return {
+        styles: {
+          padding: '25px',
+          background: 'rgba(246, 255, 0, 0.23)',
+          borderTop: '2px solid rgba(0, 0, 0, 0.1)',
+        },
+      };
+    },
+    template: `<div v-bind:style="styles"><slot></slot></div>`,
+  },
 });
+
+storiesOf('Custom Container, Preview, and Footer', module)
+  .addDecorator(withKnobs)
+  .addDecorator(withDocsCustom(ButtonDocs))
+  .add('Button', () => {
+    const warning = boolean('Warning', false);
+    const success = boolean('Success', false);
+
+    return {
+      components: {
+        MyButton,
+      },
+      template: `<my-button
+        :alert="${warning}"
+        :success="${success}">My Button</my-button>`,
+    };
+  });
 
 storiesOf('With Docs from *.vue docs section', module)
   .addDecorator(withKnobs)
@@ -53,23 +91,6 @@ storiesOf('With Docs from *.vue docs section', module)
       template: `<my-button
       :alert="${warning}"
       :success="${success}">My Button</my-button>`,
-    };
-  });
-
-storiesOf('Custom Preview and Footer', module)
-  .addDecorator(withKnobs)
-  .addDecorator(withDocsCustom(ButtonDocs))
-  .add('Button', () => {
-    const warning = boolean('Warning', false);
-    const success = boolean('Success', false);
-
-    return {
-      components: {
-        MyButton,
-      },
-      template: `<my-button
-        :alert="${warning}"
-        :success="${success}">My Button</my-button>`,
     };
   });
 

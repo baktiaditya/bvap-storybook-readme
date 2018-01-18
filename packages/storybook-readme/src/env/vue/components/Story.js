@@ -3,8 +3,9 @@ import MarkdownContainer from './MarkdownContainer';
 export default {
   data() {
     return {
+      id: 'container-docs',
       styles: {
-        margin: '16px 16px 36px',
+        padding: '20px',
       },
       docsBeforePreview: this.$props.docs.docsBeforePreview,
       docsAfterPreview: this.$props.docs.docsAfterPreview,
@@ -13,7 +14,7 @@ export default {
   components: { MarkdownContainer },
   props: ['docs'],
   template: `
-    <div v-bind:style="styles">
+    <div v-bind:id="id" v-bind:style="styles">
       <markdown-container :docs="docsBeforePreview" />
       <slot></slot>
       <markdown-container :docs="docsAfterPreview" />

@@ -1,11 +1,15 @@
 import MarkdownContainer from './components/MarkdownContainer';
-import Story from './components/Story';
+import ContainerDocs from './components/Story';
 import StoryPreview from './components/StoryPreview';
 import FooterDocs from './components/FooterDocs';
 
 import commonHandler from '../common';
 
 function renderStory({ storyFn, kind, story, docs, config }) {
+  const ContainerComponent = config.ContainerComponent || ContainerDocs;
+  const PreviewComponent = config.PreviewComponent || StoryPreview;
+  const FooterComponent = config.FooterComponent || FooterDocs;
+
   return {
     data() {
       return {
@@ -15,29 +19,21 @@ function renderStory({ storyFn, kind, story, docs, config }) {
 
     render(h) {
       return h(
-        Story,
+        ContainerComponent,
         {
           props: {
             docs,
           },
         },
         [
-          h(config.PreviewComponent ? config.PreviewComponent : StoryPreview, [
-            h(this.story),
+          h(PreviewComponent, [h(this.story)]),
+          h(FooterComponent, { slot: 'footer' }, [
+            h(MarkdownContainer, {
+              props: {
+                docs: [config.docsAtFooter],
+              },
+            }),
           ]),
-          h(
-            config.FooterComponent ? config.FooterComponent : FooterDocs,
-            {
-              slot: 'footer',
-            },
-            [
-              h(MarkdownContainer, {
-                props: {
-                  docs: [config.docsAtFooter],
-                },
-              }),
-            ]
-          ),
         ]
       );
     },
@@ -72,4 +68,7 @@ export default {
     callAsDecorator: withDocsCallAsDecorator,
     callAsHoc: withDocsCallAsHoc,
   },
+  ContainerDocs,
+  StoryPreview,
+  FooterDocs,
 };

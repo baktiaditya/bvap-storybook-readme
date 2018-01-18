@@ -2,8 +2,8 @@
 
 ### Usage
 
-```js
-import MyButton from 'components/MyButton';
+```jsx
+import Button from 'components/Button/Button';
 ```
 
 <!-- STORY -->
@@ -24,15 +24,15 @@ import MyButton from 'components/MyButton';
 
 #### Icons
 
-```js
+```jsx
 {
-  components: { MyButton },
-  template: `<my-buton icon="mail">Send mail</my-button>`
+  components: { Button },
+  template: `<button icon="mail">Send mail</button>`
 }
 
 {
-  components: { MyButton },
-  template: `<my-buton icon="trash" iconPosition="right">Send mail</my-button>`
+  components: { Button },
+  template: `<button icon="trash" iconPosition="right">Send mail</button>`
 }
 ```
 
@@ -42,9 +42,9 @@ Add `value` property that will be available at all event callback. Helps to prev
 
 For example:
 
-```js
+```jsx
 {
-  components: { MyButton },
-  template: `<my-buton v-on:click=={remove} value={item.id}>Remove</my-button>`
+  components: { Button },
+  template: `<button v-on:click=={remove} value={item.id}>Remove</button>`
 }
 ```

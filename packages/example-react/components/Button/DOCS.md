@@ -2,7 +2,7 @@
 
 Normal application button. 
 
-```js
+```jsx
 import Button from 'components/Button/Button';
 ```
 
@@ -14,12 +14,12 @@ Use **alert** and **success** flags only in these cases:
 
 **alert** - when `onClick` action removes something
 
-```js
+```jsx
 <Button alert={true}>Remove user</Button>
 ```
 
 **success** - when `onClick` action adds something
 
-```js
+```jsx
 <Button success={true}>Add user</Button>
 ```

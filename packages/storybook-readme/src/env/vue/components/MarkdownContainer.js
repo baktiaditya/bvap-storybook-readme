@@ -4,13 +4,18 @@ export default {
   mounted() {
     highlight(this.$el);
   },
+  data() {
+    return {
+      className: 'markdown-container',
+    };
+  },
   props: ['docs'],
   template: `
-    <div>
+    <div v-bind:className="className">
       <template v-if="docs">
-          <div v-for="(doc, index) in docs" :key="index">
+        <div v-for="(doc, index) in docs" :key="index">
           <div v-html="doc" class="markdown-body"></div>
-          </div>
+        </div>
       </template>
     </div>
   `,

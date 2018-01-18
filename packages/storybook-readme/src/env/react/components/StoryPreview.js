@@ -1,12 +1,30 @@
-import styled from 'react-emotion';
+import React from 'react';
+import PropTypes from 'prop-types';
 
-export default styled('div')`
-  position: relative;
-  box-sizing: border-box;
-  margin: 16px 0 16px 0;
-  padding: 24px;
-  border: 1px dashed #e5e5e5;
-  background-color: #ffffff;
-  transition: background-color 0.2s;
-  text-align: left;
-`;
+const StoryPreview = props => {
+  const defaultStyle = {
+    boxSizing: 'border-box',
+    margin: '16px 0',
+    padding: 24,
+    border: '1px dashed #e5e5e5',
+    backgroundColor: '#fff',
+    textAlign: 'left',
+  };
+
+  return (
+    <div
+      {...props}
+      id="story-preview"
+      style={{
+        ...defaultStyle,
+        ...props.style,
+      }}
+    />
+  );
+};
+
+StoryPreview.propTypes = {
+  style: PropTypes.object,
+};
+
+export default StoryPreview;

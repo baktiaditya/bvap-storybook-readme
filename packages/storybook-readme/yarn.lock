@@ -1764,13 +1764,6 @@ react-dom@^16.1.1:
     object-assign "^4.1.1"
     prop-types "^15.6.0"
 
-react-emotion@^8.0.11:
-  version "8.0.11"
-  resolved "https://registry.yarnpkg.com/react-emotion/-/react-emotion-8.0.11.tgz#3bc6b2d3340560ccad9f94fc4447b15a046ede05"
-  dependencies:
-    babel-plugin-emotion "^8.0.11"
-    emotion-utils "^8.0.11"
-
 react@^16.1.1:
   version "16.1.1"
   resolved "https://registry.yarnpkg.com/react/-/react-16.1.1.tgz#d5c4ef795507e3012282dd51261ff9c0e824fe1f"
@@ -1975,6 +1968,10 @@ sshpk@^1.7.0:
     ecc-jsbn "~0.1.1"
     jsbn "~0.1.0"
     tweetnacl "~0.14.0"
+
+string-raw@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/string-raw/-/string-raw-1.0.1.tgz#01be2665a1cfa2c57520c910698f6ca276a4c726"
 
 string-width@^1.0.1, string-width@^1.0.2:
   version "1.0.2"

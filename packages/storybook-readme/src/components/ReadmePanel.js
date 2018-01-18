@@ -1,15 +1,15 @@
+import '../styles/github-markdown-css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { css } from 'react-emotion';
 
 import { ADD_DOC_EVENT } from '../constants';
 import { setDocs, getDocs } from '../services/docsManager';
 import highlight from '../services/highlite';
-import '../styles/github-markdown-css';
 
-const markdownContainerStyle = css`
-  padding: 10px;
-`;
+const markdownContainerStyle = {
+  padding: 10,
+};
 
 export default class ReadmePanel extends React.Component {
   state = {

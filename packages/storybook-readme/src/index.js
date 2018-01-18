@@ -1,3 +1,5 @@
+import './styles/github-markdown-css';
+
 import isPlainObject from 'lodash/isPlainObject';
 import isString from 'lodash/isString';
 import isArray from 'lodash/isArray';
@@ -5,7 +7,6 @@ import isArray from 'lodash/isArray';
 import vueHandler from './env/vue';
 import reactHandler from './env/react';
 import normalizeDocs from './services/normalizeDocs';
-import './styles/github-markdown-css';
 
 let handler = null;
 
