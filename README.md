@@ -1,6 +1,7 @@
 # Storybook README addon
+This project is based on [tuchk4/storybook-readme](https://github.com/tuchk4/storybook-readme)
 
-![Storybook README addon](https://tuchk4.tinytake.com/media/6074cc?filename=1507031891423_03-10-2017-14-58-09.png&sub_type=thumbnail_preview&type=attachment&width=700&height=542&_felix_session_id=53f589ad3ebd6ae15ad9850b6bb20044&salt=MjAwMDAyNF82MzIxMzU2)
+![Storybook README addon](http://bvap-sg.s3.amazonaws.com/assets/images/bvap-storybook-readme.jpg)
 
 [Example Storybook with README addon](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=Custom%20Preview%20and%20Footer&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel)
 
@@ -77,6 +78,9 @@ storiesOf('Content', module)
 
 // with custom preview element
 const withCustomPreview = withDocs({
+  ContainerComponent: styled.div`
+    position: relative;
+  `,
   PreviewComponent: styled.div`
     text-align: center;
     padding: 25px;
