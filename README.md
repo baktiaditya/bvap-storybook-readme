@@ -1,7 +1,7 @@
 # Storybook README addon
 This project is based on [tuchk4/storybook-readme](https://github.com/tuchk4/storybook-readme)
 
-![Storybook README addon](http://bvap-sg.s3.amazonaws.com/assets/images/Storybook%20(2018-01-19%2001-22-51).jpg)
+![Storybook README addon](http://bvap-sg.s3.amazonaws.com/assets/images/bvap-storybook-readme.jpg)
 
 [Example Storybook with README addon](https://baktiaditya.github.io/bvap-storybook-readme/?knob-alert=false&knob-success=false&knob-text=Hello%20Im%20Button&selectedKind=Custom%20Preview%20and%20Footer&selectedStory=Button&full=0&addons=1&stories=1&panelRight=1&addonPanel=storybook%2Factions%2Factions-panel)
 
